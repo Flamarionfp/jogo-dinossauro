@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Segoe UI;
+    src: url('font.ttf');
+}
+
+#main{
+    height: 510px;
+    width: 100%;  
+}
+
+#jogo{
+    height: 175px;
+    width: 600px;
+    margin-left: 26%;
+    margin-bottom: 19px;
+}
+
+#dinossauro{
+    height: 55px;
+    width: 55px;
+    padding-left: 20px;  
+    position: relative;
+    top: 120px;     
+}
+
+#dinossauro-img{
+    height: 55px;
+    width: 55px; 
+}
+
+.pular-anim{
+    animation: pular 0.4s linear; 
+}
+
+#cactus{
+    display: none;
+    position: relative;
+    top: 84px;
+    left: 90%;
+    animation: cactus-anim 1.3s infinite linear;
+}
+
+/*Animações*/
+
+@keyframes pular{
+    0%{
+        top: 120px;
+    }
+
+    30%{
+        top: 70px;
+    }
+
+    50%{
+        top: 20px;
+    }
+
+    80%{
+        top: 70px;
+    }
+
+    100%{
+        top: 120px;
+    }
+}
+
+@keyframes cactus-anim{
+    0%{
+        left: 90%;
+    }
+    100%{
+        left: -35px;
+    }   
+}
+
+#msg{
+    color:  rgb(95, 99, 104);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.55;
+    margin: auto;
+    padding: 10px;  
+    width: 44%;   
+}
+
+#msg h1{
+    color: rgb(32, 33, 36);
+    font-size: 1.5em; 
+}
+
+#msg h2{
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 10px; 
+}
+
+ul{
+    padding-left: 45px;
+}
+
+ul span{
+    color: rgb(26, 115, 232);
+    cursor: pointer;
+}
+
+#err-msg{
+    font-size: .7em;
+    margin-top: 10px;
+}
+
+/*Ajustes na Responsividade*/
+
+@media (max-width: 800px)
+{
+    #jogo{ 
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    #dinossauro{
+        padding-left: 5px;
+    }
+
+    #msg{
+        margin-left: 10%;
+        width: 100%;
+    }
+}
